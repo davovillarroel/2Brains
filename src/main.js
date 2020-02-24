@@ -6,6 +6,11 @@ import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import firebase from 'firebase'
 import '@/firebase/init.js'
+import axios from 'axios'
+import VueAxios from 'vue-axios'
+import '@/assets/css/font.css'
+ 
+Vue.use(VueAxios, axios)
 
 Vue.config.productionTip = false
 

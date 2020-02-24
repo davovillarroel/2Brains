@@ -2,6 +2,7 @@
   <div id="app">
     <navigation/>
     <router-view/>
+    <footerApp/>
   </div>
 </template>
 
@@ -19,12 +20,15 @@
 
 <script>
 
+import footerApp from '@/components/footerApp.vue'
 import navigation from '@/components/navigation.vue'
+
 
 export default {
   name: 'app',
   components: {
-    navigation
+    navigation,
+    footerApp
   }
 }
 </script>

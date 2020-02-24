@@ -2,9 +2,17 @@
     <div id="navIndex">
         <section>
             <nav class="navbar navbar-dark bg-dark navbar-expand-md fixed-top">
-                <a href="" class="navbar-brand">
-                    <img src="../assets/logo.png" width="30" height="30" alt="My-app">
-                </a>
+                <template v-if="user">
+                    <router-link class="navbar-brand" to="/dashboard">
+                        <i class="icon-davos"></i>
+                    </router-link>
+                </template>
+                <template v-else>
+                    <router-link class="navbar-brand" to="/">
+                        <i class="icon-davos"></i>
+                    </router-link>
+                </template>
+                
 
                 <template v-if="user">
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -13,16 +21,13 @@
                     <div id="navbarNav" class="collapse navbar-collapse">
                         <ul class="navbar-nav ml-auto">
                             <li class="nav-item">
-                                <router-link class="nav-link" to="/about">{{user.email}}</router-link>
+                                <router-link class="nav-link" to="/dashboard"><span class="icon-user"></span> {{user.email}}</router-link>
                             </li>
                             <li class="nav-item">
-                                <router-link class="nav-link" to="/about">Colaboradores</router-link>
+                                <router-link class="nav-link" to="/colaboradores">Colaboradores</router-link>
                             </li>
                             <li class="nav-item">
-                                <router-link class="btn btn-sm btn-success" to="/dashboard">Dashboard</router-link>
-                            </li>
-                            <li class="nav-item">
-                                <a href="" class="btn btn-sm btn-outline-danger" @click.prevent="logout">Cerrar Sesión</a>
+                                <a href="" class="btn btn-sm btn-danger" @click.prevent="logout"> <span class="icon-power"></span> Cerrar Sesión</a>
                             </li>
                         </ul>
                     </div>
@@ -35,9 +40,6 @@
                         <ul class="navbar-nav ml-auto">
                             <li class="nav-item">
                                 <router-link class="nav-link" to="/">Home <span class="sr-only">(current)</span></router-link>
-                            </li>
-                            <li class="nav-item">
-                                <router-link class="nav-link" to="/about">About</router-link>
                             </li>
                             <li class="nav-item">
                                 <router-link class="btn btn-sm btn-success" to="/login">Iniciar Sesión</router-link>
@@ -67,6 +69,20 @@
 }
 .btn{
     min-width: 10rem;
+}
+.navbar-brand {
+    margin-left: 1rem;
+}
+
+.navbar-brand .icon-davos{
+    font-size: 40px;
+    transform: all 4ms ease;
+}
+.navbar-brand:hover .icon-davos{
+   transform: rotate(45deg);
+   -webkit-transform: rotate(45deg);
+   -moz-transform: rotate(45deg);
+   -o-transform: rotate(45deg);
 }
 
 </style>

@@ -15,7 +15,7 @@
                             <input type="password" class="form-control form-control-sm" id="user-password" v-model="password">
                         </div>
                         <div class="alert alert-danger" v-if="warning"><small>{{warning}}</small></div>
-                        <button type="submit" class="btn btn-primary">Ingresar</button>
+                        <button type="submit" class="btn btn-success">Ingresar</button>
                     </form>
                 </div>
             </div>
