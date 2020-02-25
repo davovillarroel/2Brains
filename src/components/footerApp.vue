@@ -15,14 +15,14 @@
 <style  scoped>
 #footer{
     width: 100%;
-    height: 40px;
+    height: auto;
     position:fixed;
     bottom: 0;
     left: 0;
     background-color: #ffffff;
 }
 #footer p{
-    margin-bottom: 0;
+    margin-bottom: 8px;
     margin-top: 8px;
 }
 </style>

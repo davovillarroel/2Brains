@@ -7,6 +7,11 @@
                       <span class="icon-davos"></span>
                       <h1>David Alfredo Villarroel Contreras</h1>
                       <p>Diseñador Gráfico/web</p>
+                      <p>Inicia sesión o registrate para acceder al contenido.</p>
+                      <div>
+                        <router-link to="/login">Iniciar Sesión</router-link> | 
+                        <router-link to="/register">Crear una cuenta</router-link>
+                      </div>
                   </div>
                   
               </div>
