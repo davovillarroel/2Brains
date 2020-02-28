@@ -11,7 +11,7 @@
                     <div class="card-body">
                         <h5 class="card-title mb-0">{{colabName}} {{colabLastName}}</h5>
                         <p class="card-text mb-0">{{email}}</p>
-                        <p class="card-text mb-0"><small class="text-muted">{{phone}}</small></p>
+                        <p class="card-text mb-0"><small class="text-muted">Teléfono: {{phone}}</small></p>
                     </div>
                 </div>
             </div>

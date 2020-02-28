@@ -7,7 +7,7 @@
                 </div>
                 <div class="row">
                     <div class="col-12 col-md-4" v-for="(data, index) in colaboradores" :key="index">
-                        <card :colabName="data.name.first" :colabLastName="data.name.last" :email="data.email" :phone="data.phone" :picture="data.picture"/>
+                        <card :colabName="data.name.first" :colabLastName="data.name.last" :email="data.email" :phone="data.phone" :picture="data.picture.medium"/>
                     </div>
                 </div>
             </div>
@@ -32,14 +32,15 @@ export default {
 
     data(){
         return{
-            colaboradores:null
+            colaboradores:[]
         }
     },
     name: 'cardList',
     mounted () {
-        this.axios.get('https://next.json-generator.com/api/json/get/N1_hkQ67d').then((response) => {
-            
-            this.colaboradores = response.data
+        this.axios.get('https://randomuser.me/api/?results=10').then((response) => {   
+            this.colaboradores = response.data.results
+
+            console.log('objeto')
             console.log(this.colaboradores)
         })
     },

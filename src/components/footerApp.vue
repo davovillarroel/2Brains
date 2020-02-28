@@ -1,5 +1,5 @@
 <template>
-    <div id="footer">
+    <div id="footerApp">
         <section>
             <div class="container">
                 <div class="row">
@@ -13,7 +13,7 @@
 </template>
 
 <style  scoped>
-#footer{
+#footerApp{
     width: 100%;
     height: auto;
     position:fixed;
@@ -21,13 +21,13 @@
     left: 0;
     background-color: #ffffff;
 }
-#footer p{
+#footerApp p{
     margin-bottom: 8px;
     margin-top: 8px;
 }
 </style>
 <script>
 export default {
-    name:'footer'
+    name:'footerApp'
 }
 </script>
